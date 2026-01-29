@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #e5e7eb;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+
+h1 {
+  text-align: left;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+
+.input-section,
+.summary {
+  background-color: #020617;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  max-width: 420px;
+}
+
+
+.input-section {
+  margin-bottom: 20px;
+}
+
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  background-color: #020617;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  color: #e5e7eb;
+}
+
+input::placeholder {
+  color: #9ca3af;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+/* Buttons */
+button {
+  display: block;
+  width: 70%;
+  margin: 18px auto 0;
+  padding: 12px;
+  background-color: #38bdf8;
+  color: #020617;
+  border: none;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.5);
+}
+
+/* Summary */
+.summary p {
+  margin: 8px 0;
+  text-align: left;
+  font-size: 16px;
+}
+
+
+#warning {
+  margin-top: 10px;
+  color: #f87171;
+  font-weight: bold;
+}
+
+
+#transactionList {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  max-width: 600px;
+}
+
+
+#transactionList li {
+  background-color: #020617;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 4px solid #38bdf8;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+
+.deleteBtn {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.deleteBtn:hover {
+  background-color: #dc2626;
+}
+
+
+#clearBtn {
+  margin-top: 20px;
+  width: 60%;
+  background-color: transparent;
+  color: #f87171;
+  border: 1px solid #f87171;
+}
+
+#clearBtn:hover {
+  background-color: #f87171;
+  color: #020617;
+}
+
+
+body > * {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    text-align: center;
+  }
+
+  .input-section,
+  .summary,
+  #transactionList {
+    max-width: 100%;
+  }
+
+  button {
+    width: 80%;
+  }
+}
